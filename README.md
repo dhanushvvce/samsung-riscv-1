@@ -1,4 +1,15 @@
 # samsung-riscv
+## Basic Details
+
+Name: CHETHAN V
+
+College: Vidyavardhaka College of Engineering
+
+Email ID: chethanvenugopal@gmail.com
+
+GitHub Profile: chethankashyap24
+
+LinkedIN Profile: chethanvenugopal
 
 ## C Language
 ### Compilation using GCC Compiler

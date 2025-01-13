@@ -46,7 +46,7 @@ Compile the code using the RISC-V GCC compiler using these commands:
 
 4. Type `/main` to locate the main section in code
    
-   ![RISCV2](https://github.com/user-attachments/assets/a844c11d-190c-4347-b937-49bc490f7166)
+![RISCV2](https://github.com/user-attachments/assets/a844c11d-190c-4347-b937-49bc490f7166)
 
 </details>
 

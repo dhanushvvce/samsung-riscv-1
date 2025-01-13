@@ -57,7 +57,7 @@ This task involves comparing two optimization levels, -O1 and -Ofast, while debu
 
 ## Debugging with SPIKE
 
-![VirtualBox_vdsworkshop_13_01_2025_19_50_17](https://github.com/user-attachments/assets/6a3de190-a590-4ce8-84fa-97611087ba8d)
+![VirtualBox_vdsworkshop_13_01_2025_19_06_42](https://github.com/user-attachments/assets/cbd9a387-1df4-40c2-aa91-e320ec984e4e)
 
 The C code was compiled
 

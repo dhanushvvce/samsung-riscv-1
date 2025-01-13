@@ -11,6 +11,11 @@ GitHub Profile: chethankashyap24
 
 LinkedIN Profile: chethanvenugopal
 
+<details>
+<summary> <b>Task 1:</b></summary>
+<br>
+The task involves referring to lab videos on C programming and RISC-V, and performing the compilation of C code using both the GCC compiler and the RISC-V compiler.
+   
 ## C Language
 ### Compilation using GCC Compiler
 
@@ -43,8 +48,35 @@ Compile the code using the RISC-V GCC compiler using these commands:
    
    ![RISCV2](https://github.com/user-attachments/assets/a844c11d-190c-4347-b937-49bc490f7166)
 
+</details>
 
-  
- 
+<details>
+<summary><b>Task 2:</b></summary>
+<br>
+This task involves comparing two optimization levels, -O1 and -Ofast, while debugging a simple C program using SPIKE.
+
+## Debugging with SPIKE
+
+![VirtualBox_vdsworkshop_13_01_2025_19_50_17](https://github.com/user-attachments/assets/6a3de190-a590-4ce8-84fa-97611087ba8d)
+
+The C code was compiled
+
+In order to balance compilation time and performance, the -O1 optimisation option offers modest optimisation. It's perfect for a combination of performance enhancements that don't significantly affect debugging. Conversely, -Ofast aggressively optimises for optimal performance, even at the expense of adhering to some standard-compliant behaviours and possibly making debugging more difficult.
+The code undergoing these optimisations can be seen in the attached file.
+
+![VirtualBox_vdsworkshop_13_01_2025_20_52_37](https://github.com/user-attachments/assets/dd1b5a49-59ba-4201-b9de-1f3920afdd64)
+
+Each optimisation level's RISC-V object dump (-O1 and -Ofast).
+
+By disassembling the object file, the riscv64-unknown-elf-objdump tool reveals the machine code produced by each optimisation level:
+The code undergoing these optimisations can be seen in the attached file.
+
+![VirtualBox_vdsworkshop_13_01_2025_20_45_01](https://github.com/user-attachments/assets/0a9328fe-86de-4102-adf0-a6120fb4bfdf)
+
+![VirtualBox_vdsworkshop_13_01_2025_20_44_40](https://github.com/user-attachments/assets/f4baee36-9df7-4291-91d4-aa6b0540f90a)
+
+</details>
+
+
 
 

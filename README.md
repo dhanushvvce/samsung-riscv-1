@@ -12,7 +12,7 @@ GitHub Profile: chethankashyap24
 LinkedIN Profile: chethanvenugopal
 
 <details>
-<summary> <b>Task 1:</b></summary>
+<summary> <b>Task 1</b></summary>
 <br>
 The task involves referring to lab videos on C programming and RISC-V, and performing the compilation of C code using both the GCC compiler and the RISC-V compiler.
    
@@ -51,7 +51,7 @@ Compile the code using the RISC-V GCC compiler using these commands:
 </details>
 
 <details>
-<summary><b>Task 2:</b></summary>
+<summary><b>Task 2</b></summary>
 <br>
 This task involves comparing two optimization levels, -O1 and -Ofast, while debugging a simple C program using SPIKE.
 
@@ -77,6 +77,131 @@ The code undergoing these optimisations can be seen in the attached file.
 
 </details>
 
+<details>
+<summary><b>Task 3</b></summary>
+<br>
+   
+# RISC-V and Its Instruction Formats
 
+## Overview of RISC-V
+RISC-V is an open-source Instruction Set Architecture (ISA) that allows developers to design processors optimized for specific applications. Built on the principles of Reduced Instruction Set Computer (RISC), RISC-V represents the fifth generation of processors following this concept. Its open and free design enables developers to utilize RISC-V without licensing fees, making it an appealing alternative to proprietary processor architectures.
+
+---
+
+## Instruction Formats in RISC-V
+An instruction format outlines the structure of machine language instructions executed by a processor. These instructions, composed of binary data (0s and 1s), provide details on data locations and operations.
+
+RISC-V defines six primary instruction formats:
+
+1. **R-format**
+2. **I-format**
+3. **S-format**
+4. **B-format**
+5. **U-format**
+6. **J-format**
+
+Below is a detailed explanation of each format.
+
+---
+
+### 1. R-type Instructions
+**R-type (Register-type)** instructions work with registers rather than memory locations and are used for arithmetic and logical operations.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rd         | 5 bits | Destination register            |
+| func3      | 3 bits | Defines the operation type      |
+| rs1        | 5 bits | First source register           |
+| rs2        | 5 bits | Second source register          |
+| func7      | 7 bits | Additional operation specifier  |
+
+#### Example: ADD r9, r2, r5
+- **Operation**: Adds the values in registers `r2` and `r5`, storing the result in `r9`.
+- **32-bit Instruction**: `0000000_00101_00010_000_01001_0110011`
+
+---
+
+### 2. I-type Instructions
+**I-type (Immediate-type)** instructions utilize a register and an immediate (constant) value. These are commonly used for load and immediate operations.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rd         | 5 bits | Destination register            |
+| func3      | 3 bits | Defines the operation type      |
+| rs1        | 5 bits | Source register                 |
+| imm[11:0]  | 12 bits| Immediate value                 |
+
+#### Example: ADDI r12, r4, 5
+- **Operation**: Adds the immediate value `5` to the value in `r4` and stores it in `r12`.
+- **32-bit Instruction**: `000000000101_00100_000_01100_0010011`
+
+---
+
+### 3. S-type Instructions
+**S-type (Store-type)** instructions write register values to memory locations.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rs1        | 5 bits | Base address register           |
+| rs2        | 5 bits | Source register                 |
+| imm[11:5]  | 7 bits | Upper immediate value           |
+| imm[4:0]   | 5 bits | Lower immediate value           |
+| func3      | 3 bits | Defines the operation type      |
+
+#### Example: SW r3, 2(r1)
+- **Operation**: Stores the value in `r3` to the memory address `r1 + 2`.
+- **32-bit Instruction**: `0000000_00011_00001_010_00010_0100011`
+
+---
+
+### 4. B-type Instructions
+**B-type (Branch-type)** instructions manage branching based on conditions.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rs1        | 5 bits | First source register           |
+| rs2        | 5 bits | Second source register          |
+| imm        | 12 bits| Immediate value for branching   |
+| func3      | 3 bits | Defines the branch condition    |
+
+#### Example: BNE r0, r1, 20
+- **Operation**: Branches to the address `PC + 20` if `r0` is not equal to `r1`.
+- **32-bit Instruction**: `0000000_00001_00000_001_10100_1100011`
+
+---
+
+### 5. U-type Instructions
+**U-type (Upper Immediate)** instructions load immediate data into the destination register.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rd         | 5 bits | Destination register            |
+| imm[31:12] | 20 bits| Upper immediate value           |
+
+---
+
+### 6. J-type Instructions
+**J-type (Jump-type)** instructions enable jump operations, often used for implementing loops.
+
+#### Structure:
+| Field Name | Size   | Description                     |
+|------------|--------|---------------------------------|
+| Opcode     | 7 bits | Specifies the instruction type  |
+| rd         | 5 bits | Destination register            |
+| imm        | 20 bits| Immediate value for jump        |
+
+---
+
+</details>
 
 

@@ -206,6 +206,34 @@ Below is a detailed explanation of each format.
 
 ![RISCV_32-bit-instruction](https://github.com/user-attachments/assets/13fa70a9-4f3c-4d92-8ad3-5b53cca14eb7)
 
+---
+
+## RISC-V 15 unique instructions and their 32-bit machine codes
+
+![VirtualBox_vdsworkshop_17_01_2025_19_47_26](https://github.com/user-attachments/assets/78c6d21a-8dc7-4712-a4a8-39a1a63739e0)
+
+15 unique RISC-V instruction is picked from the above image and their machine code, opcode, format and instruction binary are specified below.
+
+| Instruction             | Opcode   | Format  | Machine Code | Binary Representation                                             |
+|-------------------------|----------|---------|--------------|---------------------------------------------------------------------|
+| `addi sp, sp, -16`      | 0010011  | I-type  | `ff010113`   | `11111111000000010000000100010011`                                 |
+| `sd ra, 8(sp)`          | 0100011  | S-type  | `00813023`   | `00000000100000011001000000100011`                                 |
+| `li a3, 30`             | 0010011  | I-type  | `01e00693`   | `00000001111000000000011010010011`                                 |
+| `jal ra, 10408`         | 1101111  | J-type  | `268000ef`   | `00100110100000000000000011101111`                                 |
+| `ld ra, 8(sp)`          | 0000011  | I-type  | `00813083`   | `00000000100000011001000010000011`                                 |
+| `ret`                   | 1100111  | I-type  | `00008067`   | `00000000000000001000000001100111`                                 |
+| `mv a1, a0`             | 0010011  | I-type  | `00050593`   | `00000000000001010000010110010011`                                 |
+| `j 12df8`               | 1101111  | J-type  | `4390206f`   | `01000011001100000010000001101111`                                 |
+| `mv s0, a0`             | 0010011  | I-type  | `00050413`   | `00000000000001010000010000010011`                                 |
+| `jalr a5`               | 1100111  | I-type  | `000780e7`   | `00000000000001111000000011100111`                                 |
+| `beqz a5, 101f0`        | 1100011  | B-type  | `00078463`   | `00000000000001111000010001100011`                                 |
+| `mv a0, s0`             | 0010011  | I-type  | `00040513`   | `00000000000001000000010100010011`                                 |
+| `jal ra, 1f134`         | 1101111  | J-type  | `7410e0ef`   | `01110100000100001110000011101111`                                 |
+| `auipc a5, 0x12`        | 0010111  | U-type  | `00012797`   | `00000000000100100001011110010111`                                 |
+| `beq a5, a0, 101f0`     | 1100011  | B-type  | `00a78563`   | `00000000101001111000010101100011`                                 |
+
+This table summarizes RISC-V instructions, detailing their opcodes, formats, machine codes, and binary representations. These instructions include basic arithmetic, control flow, and memory operations for reference.
+
 
 </details>
 

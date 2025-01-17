@@ -202,6 +202,11 @@ Below is a detailed explanation of each format.
 
 ---
 
+### An overview image of the instructions is provided below
+
+![RISCV_32-bit-instruction](https://github.com/user-attachments/assets/13fa70a9-4f3c-4d92-8ad3-5b53cca14eb7)
+
+
 </details>
 
 
